@@ -22,6 +22,7 @@ spring:
             - Path=/api/patients/** # Match /api/patients/** path
           filters:
             - StripPrefix=1 # Remove /api from the path
+            - JwtValidation # Validate JWT token - JwtValidation-GatewayFilterFactory
 
         # Route for /api/docs/patients to patient-service /v3/api-docs
         # Rest Client -> http://localhost:4004/api/docs/patients
